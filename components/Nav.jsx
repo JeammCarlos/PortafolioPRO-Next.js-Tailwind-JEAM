@@ -27,7 +27,6 @@ const links = [
 ];
 const Nav = () => {
     const pathname = usePathname();
-    console.log(pathname);
   return (
     <nav className="flex gap-8">
         {links.map((link, index) => {
@@ -37,7 +36,7 @@ const Nav = () => {
                     key={index} 
                     className={`${
                     link.path === pathname && "text-accent border-b-2 border-accent"
-                    }`}
+                    } capitalize font-medium hover:text-accent transation-all`}
                 >
                 {link.name}
             </Link>
